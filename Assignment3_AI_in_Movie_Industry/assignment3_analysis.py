@@ -84,7 +84,12 @@ def show_movie_card(row):
 # 🔹 MAIN APP FUNCTION
 # ---------------------------------------
 def main():
-    logo_path = os.path.join("data", "mokainight_logo.png")
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    logo_path = os.path.join(script_dir, "data", "mokainight_logo.png")
+    
+    # Debugging (optional – remove later if no longer needed)
+    st.write("Logo path:", logo_path)
+    st.write("File exists:", os.path.exists(logo_path))
     
     col1, col2 = st.columns([0.15, 0.85])
     with col1:
